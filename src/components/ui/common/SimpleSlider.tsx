@@ -10,14 +10,14 @@ interface SliderProps {
     children: ReactNode;
     autoSize?: boolean;
     buttons?: boolean;
-    variant?: "carousel" | "slider";
+    maxCols?:1 | 2 | 3;
 }
 
 export default function SimpleSlider({
     children,
     autoSize,
     buttons,
-    variant = "slider",
+    maxCols = 3
 }: SliderProps) {
 
 
@@ -63,33 +63,26 @@ export default function SimpleSlider({
     }, [emblaApi, getIndex])
 
     return (
-        <div className="w-full h-full">
+        <div className="w-full h-full flex flex-col gap-xs">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className={clsx(
-                    "gap-10",
-                    !autoSize && "*:flex-center",
-                    variant === "slider" && [
-                        "flex",
-                        "*:min-w-0",
-                        "*:flex-[0_0_100%]",
-                        "*:md:basis-1/2",
-                        "*:xl:basis-1/3",
-                    ],
-                    variant === "carousel" && [
-                        "w-full grid",
-                        "grid-rows-3 grid-flow-col auto-cols-[100%]",
-                        "lg:grid-flow-row lg:grid-rows-none lg:grid-cols-2",
-                    ]
+                    "-ml-10",
+                    "flex -ml-10",
+                    "*:min-w-0 *:shrink-0 *:grow-0 *:basis-full",
+                    "*:md:basis-1/2",
+                    maxCols == 2 && "*:xl:basis-1/2",
+                    maxCols == 1 && "*:md:basis-full *:xl:basis-full",
+                    maxCols == 3 && "*:xl:basis-1/3",
+                    !autoSize && "*:flex *:items-center *:justify-center *:pl-10",
                 )}>
                     {children}
                 </div>
             </div>
             {totalSlides > 1 && buttons && (
                 <div className={clsx(
-                    "w-full flex flex-col",
+                    "w-full flex",
                     "items-center justify-between gap-4",
-                    "xs:flex-row",
-                    )}>
+                )}>
                     <div>
                         {slideIndex} of {totalSlides}
                     </div>

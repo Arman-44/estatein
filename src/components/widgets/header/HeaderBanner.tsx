@@ -28,8 +28,8 @@ export default function HeaderBanner() {
             </div>
             <button
                 onClick={() => setOpen(!open)}
-                className="bg-white/10 rounded-full p-1">
-                <Icon className="w-6 h-6" name="xMark" />
+                className="flex items-center justify-center rounded-full size-9 bg-white/10">
+                <Icon className="text-3xl" name="xMark" />
             </button>
         </div>
     )

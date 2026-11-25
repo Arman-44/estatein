@@ -17,7 +17,7 @@ export default function ShowCaseSection({ children, actionHref, actionLabel,titl
 
     return (
         <SectionLayout >
-            <div className="flex items-end justify-between">
+            <div className="w-full flex items-end justify-between">
                 <div className="w-full flex flex-col gap-xs md:w-[65%] ">
                     <h2>{title}</h2>
                     <p>{desc}</p>

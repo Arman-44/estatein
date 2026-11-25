@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 interface SectionLayoutProps {
     children: ReactNode;
-    variant?: 'stack' | 'split' | 'asymmetric';
+    variant?: 'stack' | 'split' | 'asymmetric-reverse';
 }
 
 export default function SectionLayout({
@@ -20,9 +20,10 @@ export default function SectionLayout({
                 "flex justify-center flex-col items-start"
             ],
             variant === "split" && [
-                "grid grid-cols-2"
+                "grid",
+                "md:grid-cols-2"
             ],
-            variant === "asymmetric" && [
+            variant === "asymmetric-reverse" && [
                 "grid grid-cols-1",
                 "items-center",
                 "xl:grid-cols-[3fr_7fr]"

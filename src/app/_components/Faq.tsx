@@ -4,9 +4,9 @@ import { faqItems } from "@/config/faq.config";
 
 const items: ShowcaseSectionType = {
     actionHref: "#",
-    actionLabel: "View All Properties",
-    title: "Featured Properties",
-    desc: "Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click 'View Details' for more information",
+    actionLabel: "View All FAQ’s",
+    title: "Frequently Asked Questions",
+    desc: "Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.",
 }
 
 export default function Faq() {

@@ -52,6 +52,8 @@
   --text-4xl: clamp(28px, calc(19.975px + 2.508vw), 60px);
   
   --breakpoint-xs: 24.6875rem;
+
+  --container-4xs:
 }
 
 @layer base {
@@ -127,8 +129,6 @@
 }
 
 
-
-
 @utility card-width {
-  @apply w-full max-w-90 xl:max-w-130;
+  @apply max-w-90 w-full xl:max-w-130;
 }

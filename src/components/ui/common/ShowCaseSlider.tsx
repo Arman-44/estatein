@@ -76,10 +76,10 @@ export default function ShowCaseSlider({
                     "w-full flex pt-xs",
                     "items-center justify-between gap-xs",
                     "border-t-2 border-gray-15",
-                    "xs:flex-row",
+                    "xs:flex-row text-nowrap",
                 )}>
                     <ButtonAsLink
-                        className="md:hidden"
+                        className="md:hidden text-center text-wrap"
                         href={actionHref}>
                         {actionLabel}
                     </ButtonAsLink>

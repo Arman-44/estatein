@@ -22,7 +22,7 @@ export default function ButtonAsLink({ href, className, children, onClick,varian
         <Link
             onClick={handleClick}
             className={clsx(
-                "py-3.5 px-5",
+                "h-min py-3.5 px-5",
                 "rounded-sm text-nowrap",
                 "flex items-center justify-center",
                 "transition-all duration-300",

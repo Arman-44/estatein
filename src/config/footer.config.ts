@@ -1,16 +1,16 @@
 
 
-interface FooterLink {
+interface FooterLinksType {
     label: string;
     href: string;
 }
 
-export interface FooterConfigType {
+export interface FooterListType {
     title: string;
-    links: FooterLink[];
+    links: FooterLinksType[];
 }
 
-export const footerConfig: FooterConfigType[] = [
+export const footerList: FooterListType[] = [
     {
         title: 'Home',
         links: [

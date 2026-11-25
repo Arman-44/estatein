@@ -6,9 +6,9 @@ import { reviewItems } from "@/config/review.config"
 
 const items: ShowcaseSectionType = {
     actionHref: "#",
-    actionLabel: "View All Properties",
-    title: "Featured Properties",
-    desc: "Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click 'View Details' for more information",
+    actionLabel: "View All Testimonials",
+    title: "What Our Clients Say",
+    desc: "Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.",
 }
 
 export default function Review() {

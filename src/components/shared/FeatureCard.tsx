@@ -21,10 +21,13 @@ export default function FeatureCard({
             "rounded-xl border-2 border-gray-15",
         )}>
 
-            <Image
-                className="w-full max-h-108 object-contain"
-                src={image} alt="#" />
-
+            <div className="w-full max-h-108 h-full">
+                <Image
+                    src={image}
+                    alt={title}
+                    className="w-full h-full"
+                />
+            </div>
             <div className="flex flex-col gap-xs">
                 <h3>{title}</h3>
                 <p>{desc}</p>

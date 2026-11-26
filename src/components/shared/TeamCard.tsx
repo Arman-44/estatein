@@ -15,7 +15,9 @@ export default function TeamCard({ image, name, rank }: TeamCardType) {
             "border-2 rounded-sm",
             "border-gray-15 bg-gray-10"
         )}>
-            <Image src={image} alt="" />
+            <div className="w-full h-full">
+                <Image src={image} alt="" className="w-full h-auto object-contain" />
+            </div>
             <div>
                 <h3>{name}</h3>
                 <span>{rank}</span>

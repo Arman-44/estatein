@@ -13,7 +13,10 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   title: 'Estatein',
   description: 'description',
-  keywords: 'keywords'
+  keywords: 'keywords',
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://w3.org' viewBox='0 0 100 100'></svg>",
+  },
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
